@@ -50,7 +50,7 @@
         "service-mapping": {
             "url": "",
             "name": "mikaelacashman_ContigFilter",
-            "method": "filter_contigs",
+            "method": "filter_contigs_max",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",
