@@ -215,7 +215,7 @@ This sample module contains one small method - filter_contigs.
     def filter_contigs_max(self, ctx, params):
         # ctx is the context object
         # return variables are: returnVal
-        #BEGIN filter_contigs_max
+        #BEGIN filter_contigs_max        
         # Print statements to stdout/stderr are captured and available as the method log
         print('Starting filter contigs method.')
         
@@ -239,7 +239,7 @@ This sample module contains one small method - filter_contigs.
             raise ValueError('Cannot parse integer from min_length parameter (' + str(min_length_orig) + ')')
         if min_length < 0:
             raise ValueError('min_length parameter shouldn\'t be negative (' + str(min_length) + ')')
-        #add in validation for max_length
+   	#validation for max_length
 	if 'max_length' not in params:
             raise ValueError('Parameter max_length is not set in input arguments')
         max_length_orig = params['max_length']
@@ -251,7 +251,7 @@ This sample module contains one small method - filter_contigs.
         if max_length < 0:
             raise ValueError('max_length parameter shouldn\'t be negative (' + str(max_length) + ')')
         
-
+     
 
         # Step 2- Download the input data
         # Most data will be based to your method by its workspace name.  Use the workspace to pull that data
@@ -388,7 +388,8 @@ This sample module contains one small method - filter_contigs.
             }
         
         print('returning:'+pformat(returnVal))
-	#END filter_contigs_max
+                
+        #END filter_contigs_max
 
         # At some point might do deeper type checking...
         if not isinstance(returnVal, dict):
